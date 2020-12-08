@@ -4,7 +4,7 @@
 
 .intro-container {
   height: 100%;
-  background: linear-gradient(-45deg, #ee7752DD, #fbfbfb);
+  background: linear-gradient(-45deg, #ffb097, #fbfbfb);
   background-size: 400% 400%;
   animation: intro-bg-anim 8s ease infinite;
 }
