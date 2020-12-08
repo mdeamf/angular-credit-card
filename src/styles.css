@@ -14,3 +14,8 @@ body {
   background-color: #fbfbfb;
   font-family: "Roboto", "Helvetica Neue", sans-serif;
 }
+
+/* Overriding Styles */
+.p-button {
+  color: #495057
+}
