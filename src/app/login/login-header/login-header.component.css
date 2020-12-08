@@ -1,0 +1,25 @@
+.header {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 200px;
+  height: 200px;
+  margin: -16px auto 16px auto;
+  background-image: url('../../../assets/img/saturn.svg');
+}
+
+.text-content {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-family: 'Righteous', sans-serif;
+  font-size: 32px;
+  color: #F57F17;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-family: 'Poiret One', sans-serif;
+  font-weight: 900;
+}

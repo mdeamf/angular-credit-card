@@ -1,1 +1,33 @@
-<p>login-form works!</p>
+<div class="login-form">
+  <form [formGroup]="formGroup"
+        class="form">
+
+    <!-- Usuário -->
+    <span class="p-float-label p-input-icon-right">
+      <i class="pi pi-times-circle form-clickable"
+         (click)="username.value = ''; username.focus()"
+         *ngIf="username.value"></i>
+      <input #username
+             pInputText
+             required
+             formControlName="username"
+             type="text"
+             (keyup.enter)="password.focus()">
+      <label for="username">usuário</label>
+    </span>
+
+    <!-- Senha -->
+    <span class="p-float-label p-input-icon-right">
+      <i class="pi form-clickable"
+         (click)="showPassword = !showPassword"
+         [ngClass]="!showPassword ? 'pi-eye' : 'pi-eye-slash'"></i>
+      <input #password
+             pInputText
+             required
+             formControlName="password"
+             (keyup.enter)="tryFinalFunction()"
+             [type]="!showPassword ? 'password' : 'text'">
+      <label for="password">senha</label>
+    </span>
+  </form>
+</div>

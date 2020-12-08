@@ -1,5 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
+import { InputTextModule } from 'primeng/inputtext';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { LoginHeaderComponent } from './login-header/login-header.component';
 import { LoginPageComponent } from './login-page/login-page.component';
@@ -14,8 +18,18 @@ import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
     SignUpPageComponent,
   ],
   imports: [
+    /* Angular Modules */
     CommonModule,
-    LoginRoutingModule
-  ]
+    LoginRoutingModule,
+
+    /* PrimeNG Modules */
+    InputTextModule,
+    CardModule,
+    ButtonModule,
+
+    /* Angular Form Modules */
+    FormsModule,
+    ReactiveFormsModule,
+  ],
 })
 export class LoginModule {}

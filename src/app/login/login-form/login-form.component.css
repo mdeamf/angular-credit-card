@@ -1,0 +1,14 @@
+.form>span,
+.form>span>input,
+.form-button {
+  width: 100%;
+}
+
+.form-clickable {
+  cursor: pointer;
+}
+
+.p-float-label {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}

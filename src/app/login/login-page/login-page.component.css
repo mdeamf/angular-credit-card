@@ -1,0 +1,38 @@
+* {
+  user-select: none;
+}
+
+.login-page {
+  height: 100%;
+  background: linear-gradient(-45deg, #ee7752, #ff9f19, #ad2f83, #23d5ab);
+  background-size: 400% 400%;
+  animation: login-bg-anim 13s ease infinite;
+  overflow: auto;
+  padding: 16px;
+}
+
+.login-card {
+  max-width: 500px;
+}
+
+.login-buttons button {
+  width: 100%;
+}
+
+.p-button-link {
+  text-decoration: underline;
+}
+
+@keyframes login-bg-anim {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}

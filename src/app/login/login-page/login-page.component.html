@@ -1,1 +1,32 @@
-<p>login-page works!</p>
+<div class="login-page p-d-flex p-jc-center p-ai-center p-ac-center">
+  <div class="login-card">
+    <p-card>
+      <app-login-header></app-login-header>
+
+      <app-login-form [formGroup]="loginForm"></app-login-form>
+
+      <div class="login-buttons">
+        <div class="p-grid p-flex-row-reverse">
+          <div class="p-sm-6 p-col-12">
+            <button pButton
+                    type="button"
+                    class="form-button"
+                    label="acessar"></button>
+          </div>
+          <div class="p-sm-6 p-col-12">
+            <button pButton
+                    type="button"
+                    label="criar conta"
+                    class="p-button-outlined"></button>
+          </div>
+          <div class="p-col-12">
+            <button pButton
+                    type="button"
+                    label="esqueci minha senha"
+                    class="p-button-link"></button>
+          </div>
+        </div>
+      </div>
+    </p-card>
+  </div>
+</div>
