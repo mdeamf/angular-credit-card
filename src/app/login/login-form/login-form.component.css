@@ -12,3 +12,17 @@
   margin-top: 16px;
   margin-bottom: 16px;
 }
+
+/* Form Green Styles */
+.form-green-color .p-inputtext:enabled:hover {
+  border-color: #689F38 !important;
+}
+
+.form-green-color .p-inputtext:focus {
+  box-shadow: unset;
+  border-color: #689F38;
+}
+
+.form-green-color .p-inputtext.p-error, .p-inputtext.p-invalid, .p-inputtext.ng-dirty.ng-invalid {
+  border-color: #f44336 !important;
+}

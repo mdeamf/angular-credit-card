@@ -9,6 +9,7 @@ import { FormGroup } from '@angular/forms';
 export class LoginFormComponent implements OnInit {
   @Input() formGroup: FormGroup;
   @Input() showPasswordMinLength: Boolean;
+  @Input() showGreenForm: Boolean;
   @Output() finalFunction: EventEmitter<void> = new EventEmitter();
 
   showPassword: Boolean = false;
