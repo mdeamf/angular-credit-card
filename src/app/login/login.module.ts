@@ -5,6 +5,7 @@ import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { DialogModule } from 'primeng/dialog';
 import { InputTextModule } from 'primeng/inputtext';
+import { ForgotPasswordPageComponent } from './forgot-password-page/forgot-password-page.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { LoginHeaderComponent } from './login-header/login-header.component';
 import { LoginPageComponent } from './login-page/login-page.component';
@@ -17,6 +18,7 @@ import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
     LoginHeaderComponent,
     LoginFormComponent,
     SignUpPageComponent,
+    ForgotPasswordPageComponent,
   ],
   imports: [
     /* Angular Modules */

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ForgotPasswordPageComponent } from './forgot-password-page/forgot-password-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
 
@@ -13,6 +14,11 @@ const routes: Routes = [
     path: 'sign-up',
     component: SignUpPageComponent,
     data: { animation: 'SignUpPage' }
+  },
+  {
+    path: 'forgot-password',
+    component: ForgotPasswordPageComponent,
+    data: { animation: 'ForgotPasswordPage' }
   }
 ];
 

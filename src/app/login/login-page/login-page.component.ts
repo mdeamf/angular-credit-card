@@ -25,5 +25,7 @@ export class LoginPageComponent implements OnInit {
     this.router.navigate(['/login/sign-up']);
   }
 
-  goToForgotPassword(): void {}
+  goToForgotPassword(): void {
+    this.router.navigate(['/login/forgot-password']);
+  }
 }
