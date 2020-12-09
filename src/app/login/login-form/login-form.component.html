@@ -5,7 +5,7 @@
     <!-- Usuário -->
     <span class="p-float-label p-input-icon-right">
       <i class="pi pi-times-circle form-clickable"
-         (click)="username.value = ''; username.focus()"
+         (click)="setFieldValue('username', ''); username.focus()"
          *ngIf="username.value"></i>
       <input #username
              pInputText
@@ -13,7 +13,18 @@
              formControlName="username"
              type="text"
              (keyup.enter)="password.focus()">
-      <label for="username">usuário</label>
+      <label class="login-icon-valid"
+             for="username">
+        usuário
+        <i class="pi"
+           [ngClass]="{
+                        'pi-check' : getFieldValid('username'),
+                        'pi-times' : !getFieldValid('username')
+                      }"
+           [style.color]="getFieldValid('username') ? '#14ad14' : '#f44336'"
+           style="font-size: 10px;"
+           *ngIf="getFieldValid('username') || getFieldDirty('username')"></i>
+      </label>
     </span>
 
     <!-- Senha -->
@@ -27,7 +38,20 @@
              formControlName="password"
              (keyup.enter)="tryFinalFunction()"
              [type]="!showPassword ? 'password' : 'text'">
-      <label for="password">senha</label>
+      <label for="password">
+        senha
+        <span style="color: #f44336">
+          {{ showPasswordMinLength && password.value && !getFieldValid('password') ? '(mín. de 8 caracteres)' : '' }}
+        </span>
+        <i class="pi"
+           [ngClass]="{
+                        'pi-check' : getFieldValid('password'),
+                        'pi-times' : !getFieldValid('password')
+                      }"
+           [style.color]="getFieldValid('password') ? '#14ad14' : '#f44336'"
+           style="font-size: 10px;"
+           *ngIf="getFieldValid('password') || getFieldDirty('password')"></i>
+      </label>
     </span>
   </form>
 </div>

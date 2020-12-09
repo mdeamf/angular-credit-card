@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
+import { DialogModule } from 'primeng/dialog';
 import { InputTextModule } from 'primeng/inputtext';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { LoginHeaderComponent } from './login-header/login-header.component';
@@ -26,6 +27,7 @@ import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
     InputTextModule,
     CardModule,
     ButtonModule,
+    DialogModule,
 
     /* Angular Form Modules */
     FormsModule,

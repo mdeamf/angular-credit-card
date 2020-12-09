@@ -1,1 +1,44 @@
-<p>sign-up-page works!</p>
+<div class="login-page sign-up-bg p-d-flex p-jc-center p-ai-center p-ac-center">
+  <div class="login-card">
+    <p-card>
+      <app-login-header subtitle="crie sua conta, é rápido e fácil"></app-login-header>
+
+      <app-login-form [formGroup]="signUpForm"
+                      [showPasswordMinLength]="true"
+                      (finalFunction)="doSignUp()"></app-login-form>
+
+      <div class="login-buttons">
+        <div class="p-grid p-flex-row-reverse">
+          <div class="p-col-12">
+            <button pButton
+                    type="button"
+                    class="form-button p-button-success"
+                    label="criar conta"
+                    [disabled]="!signUpForm.valid"
+                    (click)="doSignUp()"></button>
+          </div>
+          <div class="p-col-12">
+            <button pButton
+                    type="button"
+                    label="voltar para login"
+                    class="p-button-outlined p-button-success"
+                    (click)="goToLogin()"></button>
+          </div>
+        </div>
+      </div>
+    </p-card>
+  </div>
+</div>
+
+<p-dialog header="Pronto!"
+          (onHide)="goToLogin()"
+          [(visible)]="signUpShowDialog"
+          [baseZIndex]="10000">
+  <p>Conta criada com sucesso!</p>
+  <ng-template pTemplate="footer">
+    <p-button icon="pi pi-check"
+              label="OK"
+              styleClass="p-button-text p-button-success"
+              (click)="signUpShowDialog = false"></p-button>
+  </ng-template>
+</p-dialog>
