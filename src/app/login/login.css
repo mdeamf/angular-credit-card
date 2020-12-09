@@ -1,0 +1,30 @@
+/* Global Styles - Login Module */
+
+* {
+  user-select: none;
+}
+
+.login-page {
+  height: 100%;
+  background-size: 400% 400%;
+  animation: moving-background 10s ease infinite;
+  overflow: auto;
+  padding: 16px;
+}
+
+.login-card {
+  margin: auto;
+  max-width: 500px;
+}
+
+.login-buttons {
+  margin-top: 16px;
+}
+
+.login-buttons button {
+  width: 100%;
+}
+
+.p-button-link {
+  text-decoration: underline;
+}
