@@ -6,7 +6,7 @@
   height: 100%;
   background: linear-gradient(-45deg, #ffb097, #fbfbfb);
   background-size: 400% 400%;
-  animation: intro-bg-anim 8s ease infinite;
+  animation: moving-background 8s ease infinite;
 }
 
 .intro-logo {
@@ -68,19 +68,5 @@
 
   to {
     opacity: 1;
-  }
-}
-
-@keyframes intro-bg-anim {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
   }
 }
