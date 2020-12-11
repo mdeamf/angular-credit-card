@@ -1,3 +1,4 @@
+/* Header image. */
 .header {
   background-repeat: no-repeat;
   background-size: contain;
@@ -7,11 +8,13 @@
   background-image: url('../../../assets/img/saturn.svg');
 }
 
+/* Box to contain the title and subtitle. */
 .text-content {
   text-align: center;
   margin-bottom: 16px;
 }
 
+/* Title style. */
 .title {
   font-family: 'Righteous', sans-serif;
   font-size: 32px;
@@ -19,6 +22,7 @@
   margin-bottom: 16px;
 }
 
+/* Subtitle style. */
 .subtitle {
   font-family: 'Poiret One', sans-serif;
   font-weight: 900;

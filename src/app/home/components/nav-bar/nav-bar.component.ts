@@ -8,18 +8,11 @@ import { MenuItem } from 'primeng/api';
   styleUrls: ['./nav-bar.component.css'],
 })
 export class NavBarComponent implements OnInit {
-  items: MenuItem[];
-
   constructor(private router: Router) {}
 
-  ngOnInit(): void {
-    this.items = [
-      { label: 'Cartões', icon: 'pi pi-credit-card' },
-      { label: 'Fatura', icon: 'pi pi-list' },
-      { label: 'Serviços', icon: 'pi pi-wallet' },
-    ];
-  }
+  ngOnInit(): void {}
 
+  /** Navigate back to the Home page. */
   goToHomePage(): void {
     this.router.navigate(['/home']);
   }

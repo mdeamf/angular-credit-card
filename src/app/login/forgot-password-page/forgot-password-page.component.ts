@@ -13,10 +13,12 @@ export class ForgotPasswordPageComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  /** Show the successful "Forgot Password" dialog. */
   doForgotPassword(): void {
     this.forgotPasswordShowDialog = true;
   }
 
+  /** Navigate to the Login page. */
   goToLogin(): void {
     this.router.navigate(['/login']);
   }

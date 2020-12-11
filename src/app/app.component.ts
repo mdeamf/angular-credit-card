@@ -9,6 +9,7 @@ import { routeStateTrigger } from 'src/assets/shared/animations';
   animations: [routeStateTrigger],
 })
 export class AppComponent {
+  /** Preparing the route, so it properly animates. */
   prepareRoute(outlet: RouterOutlet) {
     return (
       outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation

@@ -1,3 +1,4 @@
+/* Navigation Bar style. */
 .nav-bar {
   position:relative;
   height: 64px;
@@ -6,6 +7,7 @@
   animation: moving-background 10s ease infinite;
 }
 
+/* Left-most logo. */
 .nav-bar-icon {
   background-repeat: no-repeat;
   background-size: contain;
@@ -15,6 +17,7 @@
   cursor: pointer;
 }
 
+/* App title. */
 .nav-bar-title {
   font-family: 'Righteous', sans-serif;
   font-size: 24px;

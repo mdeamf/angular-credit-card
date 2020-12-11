@@ -1,28 +1,35 @@
+/* Input - Make the inputs fit the entire width */
 .form>span,
 .form>span>input,
 .form-button {
   width: 100%;
 }
 
+/* Form - Show the pointer cursor. */
 .form-clickable {
   cursor: pointer;
 }
 
+/* Input - Setting margins. */
 .p-float-label {
   margin-top: 16px;
   margin-bottom: 16px;
 }
 
-/* Form Green Styles */
+/* Form - Green Colors - Input hover. */
 .form-green-color .p-inputtext:enabled:hover {
   border-color: #689F38 !important;
 }
 
+/* Form - Green Colors - Input focus. */
 .form-green-color .p-inputtext:focus {
   box-shadow: unset;
   border-color: #689F38;
 }
 
-.form-green-color .p-inputtext.p-error, .p-inputtext.p-invalid, .p-inputtext.ng-dirty.ng-invalid {
+/* Form - Green Colors - Invalid input style. */
+.form-green-color .p-inputtext.p-error,
+.p-inputtext.p-invalid,
+.p-inputtext.ng-dirty.ng-invalid {
   border-color: #f44336 !important;
 }

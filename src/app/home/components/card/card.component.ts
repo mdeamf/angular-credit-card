@@ -14,8 +14,11 @@ import { fadeInAnimation } from './../../../../assets/shared/animations';
   styleUrls: ['./card.component.css', '../../home.css'],
   animations: [fadeInAnimation],
 })
-export class CardComponent implements OnInit, OnChanges/* , AfterViewInit */ {
+export class CardComponent implements OnInit, OnChanges {
+  /** Card object. */
   @Input() card: Cards;
+
+  /** Should the card be shown? */
   showCard: boolean = true;
 
   constructor() {}
@@ -23,15 +26,12 @@ export class CardComponent implements OnInit, OnChanges/* , AfterViewInit */ {
   ngOnInit(): void {}
 
   ngOnChanges() {
+    // Hide the card and start the fade out animation.
     this.showCard = false;
 
+    // Gradually start the fade in animation of the new card.
     setTimeout(() => {
       this.showCard = true;
     }, 100);
   }
-
-  /* ngAfterViewInit(): void {
-    this.showCard = true;
-    this.showLoading = false;
-  } */
 }

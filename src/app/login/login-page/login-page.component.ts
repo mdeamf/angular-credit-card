@@ -17,14 +17,17 @@ export class LoginPageComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  /** Login - pretend the user is logging in. */
   doLogin(): void {
     console.log(this.loginForm);
   }
 
+  /** Navigate to the Sign Up page. */
   goToSignUp(): void {
     this.router.navigate(['/login/sign-up']);
   }
 
+  /** Navigate to the Forgot Password page. */
   goToForgotPassword(): void {
     this.router.navigate(['/login/forgot-password']);
   }

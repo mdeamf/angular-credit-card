@@ -1,13 +1,18 @@
+<!-- Main Login template. -->
 <div class="login-page sign-up-bg p-d-flex p-jc-center p-ai-center p-ac-center">
+  <!-- Login card -->
   <div class="login-card">
     <p-card>
+      <!-- Login header. -->
       <app-login-header subtitle="crie sua conta, é rápido e fácil"></app-login-header>
 
+      <!-- Form - Show green colors and password min. length warning. -->
       <app-login-form [formGroup]="signUpForm"
                       [showPasswordMinLength]="true"
                       [showGreenForm]="true"
                       (finalFunction)="doSignUp()"></app-login-form>
 
+      <!-- Form - buttons. -->
       <div class="login-buttons">
         <div class="p-grid p-flex-row-reverse">
           <div class="p-col-12">
@@ -31,6 +36,7 @@
   </div>
 </div>
 
+<!-- Dialog - Pretending signing up worked. -->
 <p-dialog header="Pronto!"
           (onHide)="goToLogin()"
           [(visible)]="signUpShowDialog"

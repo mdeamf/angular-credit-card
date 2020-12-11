@@ -4,6 +4,7 @@ import { ForgotPasswordPageComponent } from './forgot-password-page/forgot-passw
 import { LoginPageComponent } from './login-page/login-page.component';
 import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
 
+/** Routes - Login module routes. */
 const routes: Routes = [
   {
     path: '',

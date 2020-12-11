@@ -1,3 +1,4 @@
+/* Large card style. */
 .payment-card-lg {
   padding: 16px;
   width: 70vw;
@@ -7,25 +8,30 @@
   margin-top: 0 !important;
 }
 
+/* Adding the font style to every item inside the card. */
 .payment-card-lg>div>* {
   position: absolute;
   font-family: "JetBrains Mono", monospace;
   color: #dddddd;
 }
 
+/* Title size and font style. */
 .payment-card-lg .title {
   font-size: 3vw;
   font-weight: 100;
 }
 
+/* Card name title position. */
 .payment-card-lg .title-name {
   top: 45%;
 }
 
+/* Card number title position. */
 .payment-card-lg .title-number {
   top: 75%;
 }
 
+/* Card value position. */
 .payment-card-lg .value {
   font-size: 4vw;
   white-space: nowrap;
@@ -34,25 +40,17 @@
   text-overflow: ellipsis;
 }
 
+/* Card name value position. */
 .payment-card-lg .value-name {
   top: 53%;
 }
 
+/* Card number value position. */
 .payment-card-lg .value-number {
   top: 83%;
 }
 
-.payment-card-lg-chip {
-  top: 16px;
-  left: 16px;
-  border: 1px solid rgb(255, 174, 24);
-  border-radius: 4px;
-  background-color: rgb(255, 195, 83);
-  width: 9vw;
-  height: 7vw;
-  z-index: 999;
-}
-
+/* Brand style and logo. */
 .payment-card-lg-brand {
   top: 8px;
   right: 8px;
@@ -62,6 +60,7 @@
   background-repeat: no-repeat;
 }
 
+/* Card background style.  */
 .payment-card-lg-bg {
   position: absolute !important;
   top: 0;
@@ -71,26 +70,26 @@
   border-radius: 5px;
 }
 
+/* Media - Width larger than 768px */
 @media screen and (min-width: 768px) {
+  /* Fixed card's size. */
   .payment-card-lg {
     width: 500px;
     height: 300px;
   }
 
+  /* Fixed title font's size. */
   .payment-card-lg .title {
     font-size: 18px;
   }
 
+  /* Fixed value font's size. */
   .payment-card-lg .value {
     font-size: 28px;
     max-width: 475px;
   }
 
-  .payment-card-lg-chip {
-    width: 67px;
-    height: 54px;
-  }
-
+  /* Fixed brand logo's size. */
   .payment-card-lg-brand {
     width: 115px;
     height: 115px;

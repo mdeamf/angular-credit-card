@@ -1,9 +1,11 @@
 /* Global Styles - Login Module */
 
+/* Block the user from selecting texts. */
 * {
   user-select: none;
 }
 
+/* Main login page style. */
 .login-page {
   height: 100%;
   background-size: 400% 400%;
@@ -12,19 +14,23 @@
   padding: 16px;
 }
 
+/* Resposive and centered card. */
 .login-card {
   margin: auto;
   max-width: 500px;
 }
 
+/* Buttons' margins. */
 .login-buttons {
   margin-top: 16px;
 }
 
+/* Buttons' width. */
 .login-buttons button {
   width: 100%;
 }
 
+/* Add an underline style to the link buttons. */
 .p-button-link {
   text-decoration: underline;
 }

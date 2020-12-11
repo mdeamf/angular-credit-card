@@ -1,11 +1,16 @@
+<!-- Main Login template. -->
 <div class="login-page login-bg p-d-flex p-jc-center p-ai-center p-ac-center">
+  <!-- Login card -->
   <div class="login-card">
     <p-card>
+      <!-- Login header. -->
       <app-login-header subtitle="acesse sua conta"></app-login-header>
 
+      <!-- Form - simple mode. -->
       <app-login-form [formGroup]="loginForm"
                       (finalFunction)="doLogin()"></app-login-form>
 
+      <!-- Form - buttons. Row reverse is added to make sure the positions make sense when the grid automatically repositions them. -->
       <div class="login-buttons">
         <div class="p-grid p-flex-row-reverse">
           <div class="p-sm-6 p-col-12">

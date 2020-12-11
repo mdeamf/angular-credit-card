@@ -1,9 +1,12 @@
+<!-- Login Form. -->
 <div class="login-form">
+  <!-- Creating a Form Group, adding the green class if the value was sent from the component call. -->
   <form [formGroup]="formGroup"
         [ngClass]="{ 'form-green-color' : showGreenForm }"
         class="form">
 
-    <!-- Usuário -->
+    <!-- Both inputs have additional buttons (clear or show), and icons to indicate the field validation. -->
+    <!-- Username field. -->
     <span class="p-float-label p-input-icon-right">
       <i class="pi pi-times-circle form-clickable"
          (click)="setFieldValue('username', ''); username.focus()"
@@ -28,7 +31,7 @@
       </label>
     </span>
 
-    <!-- Senha -->
+    <!-- Password field. -->
     <span class="p-float-label p-input-icon-right">
       <i class="pi form-clickable"
          (click)="showPassword = !showPassword"

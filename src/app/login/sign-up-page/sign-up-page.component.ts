@@ -19,10 +19,12 @@ export class SignUpPageComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  /** Show the successful "Forgot Password" dialog. */
   doSignUp(): void {
     this.signUpShowDialog = true;
   }
 
+  /** Navigate to the Login page. */
   goToLogin(): void {
     this.router.navigate(['/login']);
   }

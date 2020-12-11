@@ -1,7 +1,9 @@
+/* Card carousel margin. */
 .card-carousel {
   margin-top: 16px;
 }
 
+/* Small card style. */
 .payment-card-sm {
   width: 50px;
   height: 40px;
@@ -14,6 +16,7 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+/* Arrow above the selected card. */
 .payment-card-sm-arrow {
   position: absolute;
   top: -20px;
@@ -21,6 +24,7 @@
   height: 15px;
 }
 
+/* Card below the small card. */
 .payment-card-sm-number {
   position: absolute;
   bottom: -8px;
@@ -32,6 +36,7 @@
   border-radius: 5px;
 }
 
+/* Brand logo inside the small card. */
 .payment-card-sm-brand {
   position: absolute;
   top: 4px;
@@ -42,16 +47,19 @@
   background-repeat: no-repeat;
 }
 
+/* Selected card is completelly opaque. */
 .payment-card-sm-selected {
   opacity: 1;
 }
 
+/* Disabling the highlight and allowing overflow in the carousel arrows. */
 :host ::ng-deep .payment-card-sm-selected-left .p-carousel-prev,
 :host ::ng-deep .payment-card-sm-selected-right .p-carousel-next {
   -webkit-tap-highlight-color: transparent;
   overflow: inherit;
 }
 
+/* Adding the red arrow above the carousel arrows if a selected card is hidden. */
 :host ::ng-deep .payment-card-sm-selected-left .p-carousel-prev::before,
 :host ::ng-deep .payment-card-sm-selected-right .p-carousel-next::before {
   content: " ";
@@ -63,18 +71,22 @@
   animation: show 0.5s forwards;
 }
 
+/* Rotating the arrow when it's to the left. */
 :host ::ng-deep .payment-card-sm-selected-left .p-carousel-prev::before {
   transform: rotate(90deg);
 }
 
+/* Rotating the arrow when it's to the right. */
 :host ::ng-deep .payment-card-sm-selected-right .p-carousel-next::before {
   transform: rotate(-90deg);
 }
 
+/* Disabling the carousel interaction if it's loading a new selected card. */
 :host ::ng-deep .payment-card-disable-carousel .p-carousel {
   pointer-events: none;
 }
 
+/* Disabling the interaction with the dots below the carousel. */
 :host ::ng-deep .p-carousel-indicator {
   pointer-events: none;
 }

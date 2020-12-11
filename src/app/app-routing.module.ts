@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+/** Routes - Main application routes. */
 const routes: Routes = [
   {
     path: '',

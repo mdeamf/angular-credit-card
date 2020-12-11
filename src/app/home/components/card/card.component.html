@@ -1,8 +1,12 @@
+<!-- Card component. -->
 <div class="payment-card payment-card-lg">
+  <!-- Card background, separated from the content to create seamless animations. -->
   <div class="payment-card-lg-bg payment-card-bg-{{ card.brand }}"
        *ngIf="showCard"
        [@fadeInAnimation]>
   </div>
+
+  <!-- Card content. -->
   <div *ngIf="showCard"
        [@fadeInAnimation]>
     <div class="payment-card-lg-brand payment-card-img-{{ card.brand }}">
