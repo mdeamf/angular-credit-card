@@ -1,0 +1,98 @@
+.payment-card-lg {
+  padding: 16px;
+  width: 70vw;
+  height: 40vw;
+  max-width: 500px;
+  max-height: 300px;
+  margin-top: 0 !important;
+}
+
+.payment-card-lg>div>* {
+  position: absolute;
+  font-family: "JetBrains Mono", monospace;
+  color: #dddddd;
+}
+
+.payment-card-lg .title {
+  font-size: 3vw;
+  font-weight: 100;
+}
+
+.payment-card-lg .title-name {
+  top: 45%;
+}
+
+.payment-card-lg .title-number {
+  top: 75%;
+}
+
+.payment-card-lg .value {
+  font-size: 4vw;
+  white-space: nowrap;
+  max-width: 58vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.payment-card-lg .value-name {
+  top: 53%;
+}
+
+.payment-card-lg .value-number {
+  top: 83%;
+}
+
+.payment-card-lg-chip {
+  top: 16px;
+  left: 16px;
+  border: 1px solid rgb(255, 174, 24);
+  border-radius: 4px;
+  background-color: rgb(255, 195, 83);
+  width: 9vw;
+  height: 7vw;
+  z-index: 999;
+}
+
+.payment-card-lg-brand {
+  top: 8px;
+  right: 8px;
+  width: 15vw;
+  height: 15vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.payment-card-lg-bg {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .payment-card-lg {
+    width: 500px;
+    height: 300px;
+  }
+
+  .payment-card-lg .title {
+    font-size: 18px;
+  }
+
+  .payment-card-lg .value {
+    font-size: 28px;
+    max-width: 475px;
+  }
+
+  .payment-card-lg-chip {
+    width: 67px;
+    height: 54px;
+  }
+
+  .payment-card-lg-brand {
+    width: 115px;
+    height: 115px;
+  }
+}

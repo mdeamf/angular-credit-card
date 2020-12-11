@@ -1,0 +1,30 @@
+<div class="card-carousel">
+  <p-carousel [value]="cards"
+              [numVisible]="6"
+              [numScroll]="1"
+              [responsiveOptions]="responsiveOptions"
+              [ngClass]="{ 'payment-card-disable-carousel'  : cardLoading,
+                           'payment-card-sm-selected-left'  : cardNotShowingLeft,
+                           'payment-card-sm-selected-right' : cardNotShowingRight }"
+              (onPage)="changePage($event)">
+    <ng-template let-card
+                 pTemplate="item">
+      <div class="p-d-flex p-jc-center p-ai-center card-carousel payment-card payment-card-sm payment-card-bg-{{ card.brand }}"
+           id="card-{{ cards.indexOf(card) }}"
+           [ngClass]="{ 'p-shadow-6 payment-card-sm-selected' : cards.indexOf(card) === cardIndex }"
+           (click)="selectCard($event)">
+        <div class="payment-card-sm-arrow"
+             *ngIf="cards.indexOf(card) === cardIndex"
+             [@fadeInAnimation]>
+          <img src="../../../../assets/img/icn-arrow-down-red.svg">
+        </div>
+        <div class="payment-card-sm-number">
+          {{ card.number.substr(card.number.length-4, 4) }}
+        </div>
+  
+        <div class="payment-card-sm-brand payment-card-img-{{ card.brand }}">
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+</div>

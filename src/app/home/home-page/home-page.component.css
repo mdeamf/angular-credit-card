@@ -1,0 +1,16 @@
+.home {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  background-image: url('../../../assets/img/home-bg.svg');
+  padding: 16px;
+}
+
+.home-content {
+  background-color: #fafafa;
+  border-radius: 5px;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 12px 0;
+}
+

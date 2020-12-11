@@ -1,0 +1,24 @@
+.nav-bar {
+  position:relative;
+  height: 64px;
+  background: linear-gradient(90deg, #ad2f83, #ff9f19);
+  background-size: 300% 300%;
+  animation: moving-background 10s ease infinite;
+}
+
+.nav-bar-icon {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  background-image: url('../../../../assets/img/saturn.svg');
+  cursor: pointer;
+}
+
+.nav-bar-title {
+  font-family: 'Righteous', sans-serif;
+  font-size: 24px;
+  color: #ffffff;
+  margin-left: 16px;
+  cursor: pointer;
+}

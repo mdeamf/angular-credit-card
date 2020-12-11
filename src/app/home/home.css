@@ -1,0 +1,33 @@
+.payment-card {
+  color: #ffffff;
+  border: 1px solid var(--surface-d);
+  border-radius: 5px;
+  font-family: "JetBrains Mono", monospace;
+  margin: 16px auto;
+  position: relative;
+}
+
+.payment-card-bg-master {
+  background: linear-gradient(-45deg, #cf5a5a, #ff9f19, #db2912);
+}
+
+.payment-card-bg-visa {
+  background: linear-gradient(-45deg, #098a6c, #23d5ab, #0c3a77);
+}
+
+.payment-card-bg-benefits {
+  background: linear-gradient(-45deg, #da2b6e, #ad2f83, #5f052b);
+}
+
+.payment-card-img-master {
+  background-image: url('../../assets/img/logo-mastercard.svg');
+}
+
+.payment-card-img-visa {
+  background-image: url('../../assets/img/logo-visa.svg');
+  margin: 4px;
+}
+
+.payment-card-img-benefits {
+  background-image: url('../../assets/img/logo-benefits.svg');
+}

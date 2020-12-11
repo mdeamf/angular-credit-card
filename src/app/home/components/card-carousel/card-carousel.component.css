@@ -1,0 +1,80 @@
+.card-carousel {
+  margin-top: 16px;
+}
+
+.payment-card-sm {
+  width: 50px;
+  height: 40px;
+  font-size: 12px;
+  transition: opacity 0.6s ease-out;
+  opacity: 0.5;
+  backface-visibility: hidden;
+  user-select: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.payment-card-sm-arrow {
+  position: absolute;
+  top: -20px;
+  width: 15px;
+  height: 15px;
+}
+
+.payment-card-sm-number {
+  position: absolute;
+  bottom: -8px;
+  left: -4px;
+  border: 1px solid var(--surface-d);
+  color: #212121;
+  background: linear-gradient(-45deg, #dddddd, #eeeeee, #ffffff);
+  padding: 4px;
+  border-radius: 5px;
+}
+
+.payment-card-sm-brand {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.payment-card-sm-selected {
+  opacity: 1;
+}
+
+:host ::ng-deep .payment-card-sm-selected-left .p-carousel-prev,
+:host ::ng-deep .payment-card-sm-selected-right .p-carousel-next {
+  -webkit-tap-highlight-color: transparent;
+  overflow: inherit;
+}
+
+:host ::ng-deep .payment-card-sm-selected-left .p-carousel-prev::before,
+:host ::ng-deep .payment-card-sm-selected-right .p-carousel-next::before {
+  content: " ";
+  background-image: url('../../../../assets/img/icn-arrow-down-red.svg');
+  position: absolute;
+  top: -20px;
+  width: 12px;
+  height: 12px;
+  animation: show 0.5s forwards;
+}
+
+:host ::ng-deep .payment-card-sm-selected-left .p-carousel-prev::before {
+  transform: rotate(90deg);
+}
+
+:host ::ng-deep .payment-card-sm-selected-right .p-carousel-next::before {
+  transform: rotate(-90deg);
+}
+
+:host ::ng-deep .payment-card-disable-carousel .p-carousel {
+  pointer-events: none;
+}
+
+:host ::ng-deep .p-carousel-indicator {
+  pointer-events: none;
+}

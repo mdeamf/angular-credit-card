@@ -1,0 +1,23 @@
+<div class="payment-card payment-card-lg">
+  <div class="payment-card-lg-bg payment-card-bg-{{ card.brand }}"
+       *ngIf="showCard"
+       [@fadeInAnimation]>
+  </div>
+  <div *ngIf="showCard"
+       [@fadeInAnimation]>
+    <div class="payment-card-lg-brand payment-card-img-{{ card.brand }}">
+    </div>
+    <div class="title title-name">
+      nome
+    </div>
+    <div class="value value-name">
+      {{ card.embossedName }}
+    </div>
+    <div class="title title-number">
+      número do cartão
+    </div>
+    <div class="value value-number">
+      {{ card.number }}
+    </div>
+  </div>
+</div>

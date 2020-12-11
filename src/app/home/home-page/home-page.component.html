@@ -1,0 +1,12 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="home">
+  <div class="p-shadow-4 home-content">
+    <app-card-carousel style="margin-top: 8px;"
+                       [cards]="cards"
+                       (onChangeCard)="selectCard($event)"></app-card-carousel>
+    <app-card [card]="cards[cardIndex]"></app-card>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
