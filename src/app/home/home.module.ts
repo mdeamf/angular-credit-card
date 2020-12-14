@@ -9,6 +9,8 @@ import { CardComponent } from './components/card/card.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { HomeRoutingModule } from './home-routing.module';
+import { CardNumbersPipe } from './pipes/card-numbers.pipe';
+import { CardFinalNumbersPipe } from './pipes/card-final-numbers.pipe';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { HomeRoutingModule } from './home-routing.module';
     CardCarouselComponent,
     CardComponent,
     CardDetailComponent,
+    CardNumbersPipe,
+    CardFinalNumbersPipe,
   ],
   imports: [
     /* Angular Modules */

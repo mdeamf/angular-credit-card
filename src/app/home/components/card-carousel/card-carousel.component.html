@@ -26,7 +26,7 @@
 
         <!-- Number below card. -->
         <div class="payment-card-sm-number">
-          {{ card.number.substr(card.number.length-4, 4) }}
+          {{ card.number | cardFinalNumbers }}
         </div>
 
         <!-- Brand logo. -->

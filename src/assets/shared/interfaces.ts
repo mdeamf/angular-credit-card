@@ -25,4 +25,7 @@ export interface Cards {
 
   /** Is the card blocked? */
   isBlocked: boolean;
+
+  /** Is the card from an additional owner? */
+  isAdditional: boolean;
 }
