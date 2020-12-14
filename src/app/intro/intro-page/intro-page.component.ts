@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class IntroPageComponent implements OnInit {
 
-  showIntro: Boolean = false;
+  showIntro: boolean = false;
 
   constructor(private router: Router) { }
 

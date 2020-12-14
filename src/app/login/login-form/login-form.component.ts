@@ -10,14 +10,14 @@ export class LoginFormComponent implements OnInit {
   /** formGroup object to bind to the form reactively. Requires "username" and "password" fields. */
   @Input() formGroup: FormGroup;
   /** Should it show a warning for the password field's length? */
-  @Input() showPasswordMinLength: Boolean;
+  @Input() showPasswordMinLength: boolean;
   /** Should it force the form to be showed in a green color scheme? */
-  @Input() showGreenForm: Boolean;
+  @Input() showGreenForm: boolean;
   /** Function that should be called if the user press "Enter" while focused on the password field. */
   @Output() finalFunction: EventEmitter<void> = new EventEmitter();
 
   /** Should it show the password field as text? */
-  showPassword: Boolean = false;
+  showPassword: boolean = false;
 
   constructor() {}
 
@@ -36,7 +36,7 @@ export class LoginFormComponent implements OnInit {
    * @param field Field name inside the Form control.
    * @param value The value that should be considered inside that field.
    */
-  setFieldValue(field: String, value: String): void {
+  setFieldValue(field: string, value: string): void {
     this.formGroup.controls[`${field}`].setValue(value);
   }
 
@@ -45,7 +45,7 @@ export class LoginFormComponent implements OnInit {
    * @param field Field name inside the Form control.
    * @param value The value that should be considered inside that field.
    */
-  getFieldValid(field: String): Boolean {
+  getFieldValid(field: string): boolean {
     return this.formGroup.controls[`${field}`].valid;
   }
 
@@ -54,7 +54,7 @@ export class LoginFormComponent implements OnInit {
    * @param field Field name inside the Form control.
    * @param value The value that should be considered inside that field.
    */
-  getFieldDirty(field: String): Boolean {
+  getFieldDirty(field: string): boolean {
     return this.formGroup.controls[`${field}`].dirty;
   }
 }

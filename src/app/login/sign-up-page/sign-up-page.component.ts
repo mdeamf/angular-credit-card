@@ -13,7 +13,7 @@ export class SignUpPageComponent implements OnInit {
     password: ['', [Validators.required, Validators.minLength(8)]],
   });
 
-  signUpShowDialog: Boolean = false;
+  signUpShowDialog: boolean = false;
 
   constructor(private formBuilder: FormBuilder, private router: Router) {}
 

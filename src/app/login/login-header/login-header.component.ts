@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./login-header.component.css'],
 })
 export class LoginHeaderComponent implements OnInit {
-  @Input() subtitle: String;
+  @Input() subtitle: string;
 
   constructor() {}
 

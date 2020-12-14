@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./forgot-password-page.component.css', '../login.css'],
 })
 export class ForgotPasswordPageComponent implements OnInit {
-  forgotPasswordShowDialog: Boolean = false;
+  forgotPasswordShowDialog: boolean = false;
 
   constructor(private router: Router) {}
 
