@@ -1,0 +1,30 @@
+.card-function {
+  border-bottom: 1px solid #d6d6d6;
+  padding: 0 16px;
+}
+
+.card-function .title {
+  margin: 12px 0 8px 0;
+  font-size: 16px;
+  color: #212121;
+}
+
+.card-function .value {
+  font-size: 14px;
+}
+
+.card-function .icon {
+  font-size: 10px;
+}
+
+.card-function .green {
+  color: #689F38;
+}
+
+.card-function .red {
+  color: #f44336;
+}
+
+.card-function .normal {
+  color: #505050;
+}

@@ -1,21 +1,27 @@
 import { Component, OnInit } from '@angular/core';
+import { PrimeNGConfig } from 'primeng/api';
 import { fadeInAnimation } from './../../../assets/shared/animations';
-import { Cards } from './../../../assets/shared/interfaces';
+import { Cards, CardsOptions } from './../../../assets/shared/interfaces';
 
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.css'],
+  styleUrls: ['./home-page.component.css', '../home.css'],
   animations: [fadeInAnimation],
 })
 export class HomePageComponent implements OnInit {
+  /** Array of cards. */
   cards: Cards[];
+  /** Current selected card's index. */
   cardIndex: number = 0;
-  responsiveOptions: any[];
+  /** Array of options to show below the selected card. */
+  cardOptions: CardsOptions[] = [];
 
-  constructor() {}
+  constructor(private primengConfig: PrimeNGConfig) {}
 
   ngOnInit(): void {
+    this.primengConfig.ripple = true;
+
     this.cards = [
       {
         id: 1,
@@ -27,7 +33,7 @@ export class HomePageComponent implements OnInit {
         isCreditActive: true,
         isDebitActive: true,
         isBlocked: false,
-        isAdditional: false
+        isAdditional: false,
       },
       {
         id: 2,
@@ -39,7 +45,7 @@ export class HomePageComponent implements OnInit {
         isCreditActive: true,
         isDebitActive: true,
         isBlocked: false,
-        isAdditional: true
+        isAdditional: true,
       },
       {
         id: 3,
@@ -51,7 +57,7 @@ export class HomePageComponent implements OnInit {
         isCreditActive: false,
         isDebitActive: true,
         isBlocked: false,
-        isAdditional: false
+        isAdditional: false,
       },
       {
         id: 4,
@@ -63,7 +69,7 @@ export class HomePageComponent implements OnInit {
         isCreditActive: false,
         isDebitActive: true,
         isBlocked: false,
-        isAdditional: true
+        isAdditional: true,
       },
       {
         id: 5,
@@ -75,7 +81,7 @@ export class HomePageComponent implements OnInit {
         isCreditActive: false,
         isDebitActive: true,
         isBlocked: false,
-        isAdditional: true
+        isAdditional: true,
       },
       {
         id: 6,
@@ -87,7 +93,7 @@ export class HomePageComponent implements OnInit {
         isCreditActive: false,
         isDebitActive: true,
         isBlocked: false,
-        isAdditional: false
+        isAdditional: false,
       },
       {
         id: 7,
@@ -99,12 +105,33 @@ export class HomePageComponent implements OnInit {
         isCreditActive: false,
         isDebitActive: true,
         isBlocked: true,
-        isAdditional: true
+        isAdditional: true,
       },
+    ];
+
+    this.cardOptions = [
+      { name: 'serviços', icon: 'pi-credit-card' },
+      { name: 'faturas', icon: 'pi-file' },
+      { name: 'bloquear', icon: 'pi-lock' },
+      { name: 'ajuda', icon: 'pi-question-circle' }
     ];
   }
 
+  /** Change the selected index of the cards array. */
   selectCard(index: any): void {
     this.cardIndex = index.index;
+  }
+
+  /** Get the options list by evaluating the current selected cards's credit status. */
+  getCardOptions(): CardsOptions[] {
+    // Cloning the object.
+    let finalOptions: CardsOptions[] = [ ...this.cardOptions ];
+
+    // If the credit isn't active, hide the bill option.
+    if (!this.cards[this.cardIndex].isCreditActive) {
+      finalOptions.splice(1, 1);
+    }
+
+    return finalOptions;
   }
 }

@@ -1,0 +1,22 @@
+.card-type {
+  font-family: 'Poiret One', sans-serif;
+  font-weight: 900;
+}
+
+.card-type {
+  padding: 8px;
+  background-color: #f0f0f0;
+  border: 1px solid #d6d6d6;
+  font-family: 'Poiret One', sans-serif;
+  font-weight: 900;
+}
+
+.card-type .card-owner {
+  font-size: 32px;
+  color: #212121;
+}
+
+.card-type .card-benefits {
+  font-size: 16px;
+  color: #db2912;
+}

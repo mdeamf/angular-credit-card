@@ -29,3 +29,11 @@ export interface Cards {
   /** Is the card from an additional owner? */
   isAdditional: boolean;
 }
+
+export interface CardsOptions {
+  /** Name of the option. */
+  name: string;
+
+  /** Icon that will be shown above the option. */
+  icon: string;
+}

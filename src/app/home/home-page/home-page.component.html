@@ -6,6 +6,16 @@
                        [cards]="cards"
                        (onChangeCard)="selectCard($event)"></app-card-carousel>
     <app-card [card]="cards[cardIndex]"></app-card>
+    <app-card-detail [card]="cards[cardIndex]"></app-card-detail>
+
+    <div class="card-options p-grid">
+      <div pRipple
+           class="p-col-6 payment-card-bg-{{ cards[cardIndex].brand }}"
+           *ngFor="let option of getCardOptions()">
+        <i class="pi {{ option.icon }}"></i>
+        {{ option.name }}
+      </div>
+    </div>
   </div>
 </div>
 

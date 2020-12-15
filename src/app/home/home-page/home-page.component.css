@@ -1,7 +1,6 @@
 .home {
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
   background-image: url('../../../assets/img/home-bg.svg');
   padding: 16px;
 }
@@ -11,6 +10,29 @@
   border-radius: 5px;
   max-width: 768px;
   margin: 0 auto;
-  padding: 12px 0;
+  padding-top: 12px;
 }
 
+.card-options {
+  margin: 16px 0;
+  padding: 0 8px;
+}
+
+.card-options>.p-col-6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 96px;
+  border: 1px solid var(--surface-d);
+  border-radius: 5px;
+  margin: 8px;
+  width: calc(50% - 16px);
+  background-size: 400% 400%;
+  color: #dddddd;
+}
+
+.card-options i {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
