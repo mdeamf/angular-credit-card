@@ -19,7 +19,7 @@ export class LoginPageComponent implements OnInit {
 
   /** Login - pretend the user is logging in. */
   doLogin(): void {
-    console.log(this.loginForm);
+    this.router.navigate(['/home']);
   }
 
   /** Navigate to the Sign Up page. */
