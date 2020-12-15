@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Cards } from 'src/assets/shared/interfaces';
-import { fadeInAnimation } from './../../../../assets/shared/animations';
+import { Cards } from 'src/app/shared/interfaces';
+import { fadeInAnimation } from '../../../shared/animations';
 
 @Component({
   selector: 'app-card-carousel',

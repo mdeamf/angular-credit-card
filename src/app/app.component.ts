@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { routeStateTrigger } from 'src/assets/shared/animations';
+import { routeStateTrigger } from 'src/app/shared/animations';
 
 @Component({
   selector: 'app-root',

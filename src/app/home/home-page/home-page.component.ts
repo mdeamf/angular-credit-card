@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
-import { fadeInAnimation } from './../../../assets/shared/animations';
-import { Cards, CardsOptions } from './../../../assets/shared/interfaces';
+import { fadeInAnimation } from '../../shared/animations';
+import { Cards, CardsOptions } from '../../shared/interfaces';
 
 @Component({
   selector: 'app-home-page',
