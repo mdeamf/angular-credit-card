@@ -22,7 +22,11 @@ export class CardDetailComponent implements OnInit {
   /** Get the card title to show below the card owner's text, indicating if it's credit, debit or benefits. */
   getCardTitle(): string {
     if (this.card.isCreditActive) {
-      return 'cartão de crédito';
+      if (this.card.isDebitActive) {
+        return 'cartão de crédito e débito';
+      } else {
+        return 'cartão de crédito';
+      }
     } else {
       if (this.card.brand === 'benefits') {
         return 'cartão de benefícios';
