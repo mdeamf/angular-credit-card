@@ -17,6 +17,8 @@
   margin: 16px 0;
   padding: 0 8px;
   cursor: pointer;
+  backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .card-options>.p-col-6 {
