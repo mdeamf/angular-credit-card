@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
+import { SwiperOptions } from 'swiper';
 import { fadeInAnimation } from '../../shared/animations';
 import { Cards, CardsOptions } from '../../shared/interfaces';
 
@@ -16,6 +17,20 @@ export class HomePageComponent implements OnInit {
   cardIndex: number = 0;
   /** Array of options to show below the selected card. */
   cardOptions: CardsOptions[] = [];
+
+  config: SwiperOptions = {
+    a11y: { enabled: true },
+    direction: 'horizontal',
+    slidesPerView: 1.2,
+    centeredSlides: true,
+    spaceBetween: -5,
+    keyboard: true,
+    mousewheel: true,
+    scrollbar: false,
+    navigation: false,
+    pagination: true,
+    grabCursor: true
+  };
 
   constructor(private primengConfig: PrimeNGConfig) {}
 
@@ -113,7 +128,7 @@ export class HomePageComponent implements OnInit {
       { name: 'serviços', icon: 'pi-credit-card' },
       { name: 'faturas', icon: 'pi-file' },
       { name: 'bloquear', icon: 'pi-lock' },
-      { name: 'ajuda', icon: 'pi-question-circle' }
+      { name: 'ajuda', icon: 'pi-question-circle' },
     ];
   }
 
@@ -125,7 +140,7 @@ export class HomePageComponent implements OnInit {
   /** Get the options list by evaluating the current selected cards's credit status. */
   getCardOptions(): CardsOptions[] {
     // Cloning the object.
-    let finalOptions: CardsOptions[] = [ ...this.cardOptions ];
+    let finalOptions: CardsOptions[] = [...this.cardOptions];
 
     // If the credit isn't active, hide the bill option.
     if (!this.cards[this.cardIndex].isCreditActive) {

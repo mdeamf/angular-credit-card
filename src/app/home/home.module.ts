@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { SwiperConfigInterface, SwiperModule, SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { CarouselModule } from 'primeng/carousel';
@@ -13,6 +14,11 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { CardFinalNumbersPipe } from './pipes/card-final-numbers.pipe';
 import { CardNumbersPipe } from './pipes/card-numbers.pipe';
+
+const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
+  direction: 'horizontal',
+  slidesPerView: 'auto',
+};
 
 @NgModule({
   declarations: [
@@ -35,6 +41,15 @@ import { CardNumbersPipe } from './pipes/card-numbers.pipe';
     ButtonModule,
     CarouselModule,
     RippleModule,
+
+    /* Swiper Modules */
+    SwiperModule,
+  ],
+  providers: [
+    {
+      provide: SWIPER_CONFIG,
+      useValue: DEFAULT_SWIPER_CONFIG,
+    },
   ],
 })
 export class HomeModule {}

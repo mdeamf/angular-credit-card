@@ -2,10 +2,16 @@
 
 <div class="home">
   <div class="p-shadow-4 home-content">
-    <app-card-carousel style="margin-top: 8px;"
+    <!-- <app-card-carousel style="margin-top: 8px;"
                        [cards]="cards"
-                       (onChangeCard)="selectCard($event)"></app-card-carousel>
-    <app-card [card]="cards[cardIndex]"></app-card>
+                       (onChangeCard)="selectCard($event)"></app-card-carousel> -->
+    <swiper [config]="config"
+            [(index)]="cardIndex">
+      <div *ngFor="let card of cards">
+        <app-card [card]="card"></app-card>
+      </div>
+    </swiper>
+
     <app-card-detail [card]="cards[cardIndex]"></app-card-detail>
 
     <div class="card-options p-grid">
@@ -18,5 +24,3 @@
     </div>
   </div>
 </div>
-
-<router-outlet></router-outlet>
