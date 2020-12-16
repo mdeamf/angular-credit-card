@@ -40,3 +40,10 @@
     </p-card>
   </div>
 </div>
+
+<div *ngIf="isDoingLogin">
+  <div class="login-loading p-d-flex p-jc-center p-ai-center">
+    <p-progressSpinner></p-progressSpinner>
+  </div>
+  <p-blockUI [blocked]="true"></p-blockUI>
+</div>

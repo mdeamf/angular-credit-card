@@ -2,3 +2,10 @@
 .login-bg {
   background: linear-gradient(-45deg, #ff9f19, #ad2f83, #23d5ab);
 }
+
+.login-loading {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}

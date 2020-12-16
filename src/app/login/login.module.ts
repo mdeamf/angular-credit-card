@@ -1,10 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BlockUIModule } from 'primeng/blockui';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { DialogModule } from 'primeng/dialog';
 import { InputTextModule } from 'primeng/inputtext';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { ForgotPasswordPageComponent } from './forgot-password-page/forgot-password-page.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { LoginHeaderComponent } from './login-header/login-header.component';
@@ -30,6 +32,8 @@ import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
     CardModule,
     ButtonModule,
     DialogModule,
+    ProgressSpinnerModule,
+    BlockUIModule,
 
     /* Angular Form Modules */
     FormsModule,

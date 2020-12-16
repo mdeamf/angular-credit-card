@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { SessionService } from 'src/app/shared/services/session.service';
 
 @Component({
   selector: 'app-login-page',
@@ -13,13 +14,25 @@ export class LoginPageComponent implements OnInit {
     password: ['', Validators.required],
   });
 
-  constructor(private formBuilder: FormBuilder, private router: Router) {}
+  isDoingLogin: boolean = false;
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private session: SessionService
+  ) {}
 
   ngOnInit(): void {}
 
   /** Login - pretend the user is logging in. */
   doLogin(): void {
-    this.router.navigate(['/home']);
+    this.isDoingLogin = true;
+
+    this.session.doLogin()
+    .then(() => {
+      this.router.navigate(['/home']);
+      this.isDoingLogin = false;
+    })
   }
 
   /** Navigate to the Sign Up page. */

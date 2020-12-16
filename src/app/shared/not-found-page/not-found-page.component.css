@@ -1,0 +1,10 @@
+.not-found {
+  height: 100%;
+  font-family: 'Poiret One', sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  color: #dddddd;
+  background: linear-gradient(-45deg, #ff9f19, #ad2f83, #23d5ab);
+  background-size: 400% 400%;
+  animation: moving-background 10s ease infinite;
+}
