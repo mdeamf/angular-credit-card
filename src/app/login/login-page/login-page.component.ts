@@ -22,7 +22,9 @@ export class LoginPageComponent implements OnInit {
     private session: SessionService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.session.isLoggedIn = false;
+  }
 
   /** Login - pretend the user is logging in. */
   doLogin(): void {
